@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rappel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Calibri', sans-serif;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        h4 {
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+
+        .container {
+            width: 550px;
+            max-width: 640px;
+            min-width: 440px;
+            padding: 0 20px;
+            margin: 170px auto;
+            box-sizing: border-box;
+        }
+
+        .section {
+            margin-bottom: 1.5em;
+        }
+
+        .s {
+            margin-bottom: 2.8em;
+        }
+
+        .section p {
+            margin-bottom: 0.8em;
+            font-size: 1.2em;
+            color: rgb(107, 107, 107);
+        }
+
+        .title {
+            font-weight: 500;
+            font-size: 2.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section s">
+            <h1 class="title">Bonjour <%= person %>,</h1>
+        </div>
+        <div class="section">
+            <p>Nous tenons à vous rappeler que votre rendez-vous débutera le <strong>
+                    <%= appointment %>
+                </strong>.</p>
+            <p>Votre service(s) à cette instant est/sont:</p>
+            <ul>
+                <% service.forEach(function(singleService) { %>
+                    <li><strong>
+                            <%= singleService.service %>: <%= singleService.start %> - <%= singleService.end %>
+                        </strong></li>
+                <% }); %>
+            </ul>
+        </div>
+        <div>
+            <h4>Orlando & Mélodie</h4>
+        </div>
+    </div>
+</body>
+
+</html>

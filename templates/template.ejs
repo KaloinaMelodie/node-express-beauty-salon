@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Code</title>
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Calibri',sans-serif;
+}
+body{
+  overflow: hidden;
+}
+h4{
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.container{
+    width: 550px;
+    max-width: 640px;
+    min-width: 440px;
+    padding: 0 20px;
+    margin: 170px auto;
+    box-sizing: border-box;
+
+  }
+
+  .section{
+    margin-bottom: 1.5em;
+  }
+  .s{
+    margin-bottom: 2.8em;
+  }
+
+  .section p{
+    margin-bottom: 0.8em;
+    font-size: 1.2em;
+    color: rgb(107, 107, 107);
+  }
+
+  .title{
+    font-weight: 500;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section s">
+            <h1 class="title">Votre code est: <%= code %></h1>
+        </div>
+        <div class="section">
+            <p>Ce code est valable 10 minutes. Si vous ne l'introduisez pas dans ce délai sur la page de Divine Beaute que vous venez de visiter, vous pouvez le renvoyer à partir de votre transfert.</p>
+            <p>Si vous recevez cet e-mail sans raison apparente, vous pouvez toujours signaler les comportements suspicieux à votre équipe de support.</p>
+        </div>
+        <a href="<%= url.href %>"><%= url.label %></a>
+        <div>
+            <h4>Orlando & Melodie from Divine Beaute</h4>  
+        </div>
+    </div>
+</body>
+</html>

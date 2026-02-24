@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offer - Don't Miss Out!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            /* Light pink background */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f05f9e;
+            /* Pink heading */
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #999;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        .service-card {
+            width: 230px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border: 2px solid #f05f9e;
+            /* Pink border */
+        }
+
+        .service-card h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #f05f9e;
+            /* Pink heading */
+        }
+
+        .service-card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .discount {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f05f9e;
+            /* Pink discount */
+            margin-bottom: 15px;
+        }
+
+        .button {
+            background-color: #f05f9e;
+            /* Pink button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #e84e8d;
+            /* Darker pink on hover */
+        }
+
+        .offer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+            color: #999;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <%= specialOffer.offername %>
+            </h1>
+            <p>Valid from <%= moment(specialOffer.start).format("LLL") %> to <%= moment(specialOffer.end).format("LLL") %> only.</p>
+        </div>
+        <div class="services">
+            <% for (const offer of specialOffer.services) { %>
+                <div class="service-card">
+                    <h2><%= offer.service.servicename %></h2>
+                    <p class="discount"><%= offer.reduction %>% off</p>
+            </div>
+            <% } %>
+        </div>
+        <div class="offer">
+            <p>Enjoy exclusive discounts on all your favorite services from February 29th to March 5th only.</p>
+            <a href="<%= shopNow %>" class="button">Shop Now!</a>
+        </div>
+    </div>
+</body>
+
+</html>
