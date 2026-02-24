@@ -1,0 +1,34 @@
+{
+  "name": "m1p10mean-orlando-melodie-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Orlando0309/m1p10mean-orlando-melodie.git"
+  },
+  "author": "Orlando,Melodie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Orlando0309/m1p10mean-orlando-melodie/issues"
+  },
+  "homepage": "https://gitlab.com/Orlando0309/m1p10mean-orlando-melodie#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "co": "^4.6.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "moment": "^2.30.1",
+    "mongoose": "^8.1.1",
+    "multer": "^1.4.5-lts.1",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^6.9.9",
+    "only": "^0.0.2"
+  }
+}
